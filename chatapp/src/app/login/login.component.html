@@ -1,3 +1,9 @@
-<p>
-  login works!
-</p>
+
+<h1> Enter your name </h1>
+
+<form (submit)="logingUser($event)">
+
+  <input [(ngModel)]="username" type="text" placeholder="Username" id="username" class="form-control" name="username">
+  <button type="submit" class="btn btn-success">Enter Chat</button>
+
+</form>
