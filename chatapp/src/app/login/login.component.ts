@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   public username: string;
+  public password: string;
 
   constructor(private router:Router, private form: FormsModule) { }
 
@@ -17,9 +18,15 @@ export class LoginComponent implements OnInit {
 
   logingUser(event){
     event.preventDefault();
-    if (typeof(Storage) !== 'undefined'){
-      sessionStorage.setItem('username', this.username);
-      this.router.navigate(['/dashboard'])
+    if (this.username == "Brianna" && this.password == "1234"){
+      this.router.navigateByUrl("/dashboard");
+      if (typeof(Storage) !== 'undefined'){
+        sessionStorage.setItem('username', this.username);
+        sessionStorage.setItem('password', this.password);
+      }
+    }
+    else{
+      alert("Username and password are incorrect");
     }
   }
 
