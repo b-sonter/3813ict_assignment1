@@ -10,7 +10,9 @@ export class SadminComponent implements OnInit {
   username: string;
   password: string;
 
-  constructor(private router:Router) { }
+
+  constructor(private router:Router) {
+   }
 
   ngOnInit() {
     this.username = localStorage.getItem("username");
@@ -18,7 +20,9 @@ export class SadminComponent implements OnInit {
 
     console.log(localStorage.getItem("username"));
     console.log(localStorage.getItem("password"));
+
   }
+
 
   logout(){
     localStorage.clear();
