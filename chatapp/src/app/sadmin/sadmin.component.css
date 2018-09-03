@@ -3,10 +3,12 @@ body{
   margin: 2em;
   padding-top: 3em;
   font-family: 'Montserrat', sans-serif;
+  padding-bottom: 5em;
 }
 
 h1{
   font-weight: 600;
+  padding-bottom: 1em;
 }
 
 button{

@@ -23,6 +23,10 @@ export class SadminComponent implements OnInit {
 
   }
 
+  toChat(){
+    event.preventDefault();
+    this.router.navigateByUrl("/chat");
+  }
 
   logout(){
     localStorage.clear();

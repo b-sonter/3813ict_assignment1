@@ -4,6 +4,7 @@ import{ LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminComponent } from './admin/admin.component';
 import { SadminComponent } from './sadmin/sadmin.component';
+import { ChatComponent } from './chat/chat.component';
 
 const routes: Routes = [
   {path:'home', component: LoginComponent},
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path:'', component: LoginComponent},
   {path:'dashboard', component: DashboardComponent},
   {path:'superadmindash', component: SadminComponent},
-  {path:'admindash', component: AdminComponent}
+  {path:'admindash', component: AdminComponent},
+  {path:'chat', component: ChatComponent}
 ];
 
 @NgModule({
