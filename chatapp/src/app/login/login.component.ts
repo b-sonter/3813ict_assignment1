@@ -23,9 +23,9 @@ export class LoginComponent implements OnInit {
     if (this.username == "superadmin1" && this.password == "superadmin1234"){
       this.router.navigateByUrl("/superadmindash");
        if (typeof(Storage) !== 'undefined'){
-        locaStorage.setItem('username', this.username);
+        localStorage.setItem('username', this.username);
         localStorage.setItem('password', this.password);
-      } 
+      }
       }
     else if (this.username == "admin1" && this.password == "admin1234"){
         this.router.navigateByUrl("/admindash");
@@ -44,16 +44,10 @@ export class LoginComponent implements OnInit {
             localStorage.setItem('password', this.password);
           }
           }
+      else{
+            alert("Username and password are incorrect");
+          }
 
          }
 
         }
-    else{
-          alert("Username and password are incorrect");
-        }
-
-
-
-  }
-
-}
