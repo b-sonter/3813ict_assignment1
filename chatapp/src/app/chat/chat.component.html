@@ -3,8 +3,12 @@
 <input [(ngModel)]="message"/>
 <button (click)="sendMessage()">Send </button>
 
-<div class="messages">
+<div *ngFor="let message of messages">
+  {{message}}
+</div>
+
+<!-- <div class="messages">
   <div *ngFor="let message of messages" class="message">
     {{message.text}}
   </div>
-</div>
+</div> -->

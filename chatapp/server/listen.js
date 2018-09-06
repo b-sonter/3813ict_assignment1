@@ -1,5 +1,5 @@
 module.exports = function(http){
-  http.listen(3000, () => {
+  http.listen(port, () => {
     var d = new Date();
     var n = d.getHours();
     var m = d.getMinutes();

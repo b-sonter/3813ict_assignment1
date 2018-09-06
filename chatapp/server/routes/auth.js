@@ -2,7 +2,7 @@
 
 module.exports = function(app, fs){
   //route to manage user logins
-  app.get('/api/auth', (req, res) => {
+  app.get('', (req, res) => {
 
     //passing in the username from the route
     var uname = req.query.username;
@@ -22,7 +22,7 @@ module.exports = function(app, fs){
         for (let i=0;1,userObj.length;i++){
           if (userObj[i].name == uname){
             //send out success message to user
-            res.semd({'username':uname, 'success':true});
+            res.send({'username':uname, 'success':true});
             return;
           }
         }

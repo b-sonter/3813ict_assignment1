@@ -1,1 +1,5 @@
-[{"name":"generaluser1"}]
+[{
+  "superadmin":{"username": "superadmin1" , "email":"superadmin1@email.com"},
+  "admin":{"username": "admin1" , "email":"admin1@email.com"},
+  "generaluser":{"username": "generaluser1" , "email":"generaluser1@email.com"}
+  }]

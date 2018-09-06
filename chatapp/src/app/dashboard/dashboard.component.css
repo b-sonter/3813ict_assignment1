@@ -32,5 +32,6 @@ button:visited{
 }
 
 #box{
-  padding: 10em;
+  padding-top: 15em;
+  padding-bottom: 5em;
 }

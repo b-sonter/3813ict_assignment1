@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-sadmin',
   templateUrl: './sadmin.component.html',
@@ -8,7 +9,6 @@ import { Router } from '@angular/router';
 })
 export class SadminComponent implements OnInit {
   username: string;
-  password: string;
 
 
   constructor(private router:Router) {
@@ -16,11 +16,12 @@ export class SadminComponent implements OnInit {
 
   ngOnInit() {
     this.username = localStorage.getItem("username");
-    this.password = localStorage.getItem("password");
-
     console.log(localStorage.getItem("username"));
-    console.log(localStorage.getItem("password"));
 
+  }
+
+  addUser(event){
+    event.preventDefault();
   }
 
 

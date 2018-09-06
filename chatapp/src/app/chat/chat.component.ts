@@ -10,26 +10,42 @@ import { BrowserModule } from '@angular/platform-browser';
   styleUrls: ['./chat.component.css']
 })
 export class ChatComponent implements OnInit {
-  username: string;
-  messages = [];
-  message;
+  public username: string;
+  //messages = [];
+  message: string;
   connection;
 
   constructor(private sockServ: SocketService, private router:Router) { }
 
   ngOnInit() {
-    this.username = localStorage.getItem('username');
-    console.log("Session started for: "+this.username);
+    /* if(!localStorage.getItem('username')){
+      //no valid session is available
+      console.log('Not Validated');
+      localStorage.clear();
+      alert("Not a Valid User");
+      this.router.navigateByUrl('login');
+    } else{ */
+      this.username = localStorage.getItem('username');
+      console.log("Session started for: "+this.username);
 
-    this.connection = this.sockServ.getMessages().subscribe(message =>{
-      this.messages.push(message);
-      this.message = '';
-    });
+    /*  this.sockServ
+        .getMessages()
+        .subscribe((message:string) =>{
+          this.messages.push(message);
+        }) */
+    //}
   }
 
   sendMessage(){
     this.sockServ.sendMessage(this.username+': '+this.message);
+    this.message = '';
   }
 
+/*
+this.connection = this.sockServ.getMessages().subscribe(message =>{
+  this.messages.push(message);
+  this.message = '';
+});
+ */
 
 }
