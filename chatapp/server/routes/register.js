@@ -1,7 +1,7 @@
 /* file to log new users into the system */
 
 module.exports = function(app,fs){
-  app.get('/api/reg', (req, res) => {
+  app.get('./server/authdata', (req, res) => {
 
     var isUser = 0;
     var userObj;

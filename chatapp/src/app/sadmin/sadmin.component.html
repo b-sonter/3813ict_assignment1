@@ -21,31 +21,78 @@
 
     <!-- -->
     <div class="form-group">
-      <label for="exampleSelect1">User Type</label>
-      <select class="form-control" id="exampleSelect1">
-          <option>General User</option>
-          <option>Admin</option>
-          <option>Super Admin</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-        <label for="username">Username</label>
-        <input [(ngModel)]="username" type="text" placeholder="Username" id="username" class="form-control" name="username">
+        <label for="newuser">Username</label>
+        <input [(ngModel)]="newuser" type="text" placeholder="Username" id="newuser" class="form-control" name="newuser">
       </div>
 
       <div class="form-group">
-        <label for="password">Email</label>
-        <input [(ngModel)]="email" type="email" placeholder="Email" id="email" name="email" class='form-control'>
+        <label for="emailu">Email</label>
+        <input [(ngModel)]="emailu" type="emailu" placeholder="Email" id="emailu" name="emailu" class='form-control'>
       </div>
 
 
       <button type="submit" class="btn btn-success">Add</button>
   </form>
-  <div id="box">
+  <div id="b">
+  </div>
+
+  <h3> Add New Admin </h3>
+  <form (submit)="addAdmin($event)">
+
+    <!-- -->
+    <div class="form-group">
+        <label for="admin">Username</label>
+        <input [(ngModel)]="admin" type="text" placeholder="Username" id="admin" class="form-control" name="admin">
+      </div>
+
+      <div class="form-group">
+        <label for="emaila">Email</label>
+        <input [(ngModel)]="emaila" type="emaila" placeholder="Email" id="emaila" name="emaila" class='form-control'>
+      </div>
+
+
+      <button type="submit" class="btn btn-success">Add</button>
+  </form>
+  <div id="b">
+  </div>
+
+  <h3> Add New Super Admin </h3>
+  <form (submit)="addSadmin($event)">
+
+    <!-- -->
+    <div class="form-group">
+        <label for="sadmin">Username</label>
+        <input [(ngModel)]="sadmin" type="text" placeholder="Username" id="sadmin" class="form-control" name="sadmin">
+      </div>
+
+      <div class="form-group">
+        <label for="emails">Email</label>
+        <input [(ngModel)]="emails" type="emails" placeholder="Email" id="emails" name="emails" class='form-control'>
+      </div>
+
+
+      <button type="submit" class="btn btn-success">Add</button>
+  </form>
+  <div id="b">
   </div>
 
   <h3> Remove User</h3>
+  <form (submit)="removeUser($event)">
+
+    <!-- -->
+    <div class="form-group">
+        <label for="type">User Type</label>
+        <input [(ngModel)]="type" type="text" placeholder="User Type" id="type" class="form-control" name="type">
+      </div>
+
+      <div class="form-group">
+        <label for="uname">Username</label>
+        <input [(ngModel)]="uname" type="uname" placeholder="Username" id="uname" name="uname" class='form-control'>
+      </div>
+
+
+      <button type="submit" class="btn btn-success">Remove</button>
+  </form>
   <div id="box">
   </div>
 
