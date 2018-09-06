@@ -11,8 +11,8 @@ export class SadminComponent implements OnInit {
   username: string;
 
   public newuser: string = "";
-  public newadmin: string = "";
-  public newsadmin: string = "";
+  public admin: string = "";
+  public sadmin: string = "";
   public emailu: string = "";
   public emaila: string = "";
   public emails: string = "";
